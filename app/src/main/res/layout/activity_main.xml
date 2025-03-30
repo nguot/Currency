@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:text="Convert Curency"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputText"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <TextView
+        android:id="@+id/unit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputText"
+        app:layout_constraintEnd_toStartOf="@+id/inputText"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputText"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="338dp"
+        android:layout_height="55dp"
+        android:background="@null"
+        android:inputType="text"
+        android:text="0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377"
+        tools:ignore="ContentDescription" />
+
+    <Spinner
+        android:id="@+id/spinner_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:paddingVertical="8dp"
+        android:dropDownSelector="@android:drawable/arrow_down_float"
+        app:layout_constraintTop_toBottomOf="@+id/inputText"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/unit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/result"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/result"
+        app:layout_constraintVertical_bias="0.478" />
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="338dp"
+        android:layout_height="55dp"
+        android:background="@null"
+        android:text="0"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_1"
+        app:layout_constraintVertical_bias="0.042" />
+    <Spinner
+        android:id="@+id/spinner_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        android:dropDownSelector="@android:drawable/arrow_down_float"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="6dp"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
